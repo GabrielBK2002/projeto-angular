@@ -1,0 +1,64 @@
+<p>Ao final do processamento, qual será o valor da variável SOMA?
+</p>
+
+<div>
+    {{ soma }}
+</div>
+
+<br>
+<br>
+<p>Sequência Fibonacci
+</p>
+
+<label>Informe um número para calcular se pertence à sequência de Fibonacci</label>
+<br>
+<input [(ngModel)]="valorInput">
+<button (click)="CalcularFibonacci()">Calcular</button>
+
+<div> 
+    {{ fibonacciMensagem }}
+</div>
+
+
+<br>
+<br>
+<p>O menor valor de faturamento ocorrido em um dia do mês
+</p>
+<div>
+    {{menorFaturamento}}
+</div>
+
+<p>O maior valor de faturamento ocorrido em um dia do mês 
+</p>
+<div>
+    {{maiorFaturamento}}
+</div>
+
+<p> Número de dias no mês em que o valor de faturamento diário foi superior à média mensal
+</p>
+<div>
+    {{diasAcimaMedia}} Dias
+</div>
+
+
+<br>
+<br>
+<label>Escreva a string para ser invertida</label>
+<br>
+<input [(ngModel)]="valorInputString">
+<button (click)="inverterString()">Inverter</button>
+
+<div>
+    String invertida: {{stringInvertida}}
+</div> 
+
+
+<br>
+<br>
+<p>
+    Faturamento mensal distribuidora
+</p>
+<div *ngFor="let item of percentuaisDist">  
+    <p>{{ item.estado }}: {{ item.percentual | number: '1.2-2' }}%</p>
+  </div>
+  
